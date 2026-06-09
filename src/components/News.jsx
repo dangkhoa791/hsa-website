@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
-const NEWS_API = '/api/news'
+const RSS_URL = 'https://news.google.com/rss/search?q=HSA+%C4%91%C3%A1nh+gi%C3%A1+n%C4%83ng+l%E1%BB%B1c+%C4%90HQG+H%C3%A0+N%E1%BB%99i&hl=vi&gl=VN&ceid=VN:vi'
+const NEWS_API = `https://api.allorigins.win/raw?url=${encodeURIComponent(RSS_URL)}`
 const INTERVAL = 30 * 60 * 1000
 const PREVIEW = 4
 
