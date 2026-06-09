@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply text-3xl font-bold text-center mb-2;
+  }
+  .section-subtitle {
+    @apply text-center text-gray-500 mb-10;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-6;
+  }
+  .btn-primary {
+    @apply inline-block bg-hsa-red text-white font-semibold px-6 py-3 rounded-xl hover:bg-hsa-dark transition-colors;
+  }
+  .btn-outline {
+    @apply inline-block border-2 border-hsa-red text-hsa-red font-semibold px-6 py-3 rounded-xl hover:bg-hsa-red hover:text-white transition-colors;
+  }
+  .badge {
+    @apply inline-block text-xs font-bold px-2 py-0.5 rounded-full;
+  }
+}
+
+/* News badge blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.badge-new {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c41e3a; border-radius: 3px; }
